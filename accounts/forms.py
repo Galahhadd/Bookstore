@@ -3,10 +3,10 @@ from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 
 class CustomUserCreationForm(UserCreationForm):
 	class Meta:
-		user = get_user_model()
-		fiels = ('email', 'username',)
+		model = get_user_model()
+		fields = ("email","username",)
 
 class CustomUserChangeForm(UserChangeForm):
 	class Meta:
-		user = get_user_model()
-		fiels = ('email', 'username',)
+		model = get_user_model()
+		fields = ("email","username",)
